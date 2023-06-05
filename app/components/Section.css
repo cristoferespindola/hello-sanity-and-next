@@ -1,0 +1,13 @@
+.title-section {
+  width: calc(((100% - 1140px) / 2) + 980px);
+  margin: 0 0 20px auto;
+}
+
+.u-section-1 .u-shape-1.full-height {
+  height: 1200px;
+}
+
+.full-height ~ .u-layout-wrap-1 {
+  width: 1140px;
+  margin: -1100px auto 60px;
+}

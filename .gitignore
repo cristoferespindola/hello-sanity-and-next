@@ -1,8 +1,9 @@
-/.next
+.vercel
 .next
-/node_modules
-
+public/studio
+studio/dist
 node_modules
-next
-.env
-node_modules/
+
+
+# Local env files
+.env.local

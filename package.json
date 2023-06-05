@@ -1,22 +1,29 @@
 {
-  "name": "Sanity a lite introduction",
-  "version": "1.0.0",
-  "scripts": {
-    "dev": "next",
-    "build": "next build",
-    "start": "next start",
-    "post-update": "yarn upgrade --latest"
-  },
-  "dependencies": {
-    "next": "^13",
-    "next-sanity": "^4.1.7",
-    "react": "^18",
-    "react-dom": "^18"
-  },
-  "license": "MIT",
-  "keywords": [],
-  "description": "",
+  "name": "austim-portal",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Project to talk about Austim",
   "devDependencies": {
-    "typescript": "5.0.4"
+    "concurrently": "^8.0.1",
+    "lerna": "^6.6.0",
+    "@types/react": "^18.2.0",
+    "@types/react-dom": "18.2.0"
+  },
+  "scripts": {
+    "dev": "concurrently \"next -p 4000\" \"cd studio && sanity dev\"",
+    "build": "echo 'Building Sanity to public/studio' && cd studio && sanity build ../public/studio -y && cd .. && next build",
+    "start": "vercel dev",
+    "postinstall": "lerna bootstrap"
+  },
+  "keywords": [],
+  "author": "Cristofer Espindola",
+  "license": "MIT",
+  "dependencies": {
+    "@sanity/cli": "^3.0.0",
+    "@types/node": "18.11.18",
+    "dotenv": "^16.0.3",
+    "next": "^13.4.0",
+    "react": "^18.2.0'",
+    "react-dom": "^18.2.0'"
   }
 }
