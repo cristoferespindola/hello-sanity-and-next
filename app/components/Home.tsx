@@ -217,7 +217,7 @@ export const Home = () => {
 
             <div className="u-container-style u-layout-cell u-left-cell u-size-20 u-layout-cell-7">
               <div className="u-container-layout u-valign-middle u-container-layout-7">
-                <img src="./footer.png" alt="Projetoautismo" />
+                <img src="/images/footer.png" alt="Projetoautismo" />
               </div>
             </div>
           </div>
