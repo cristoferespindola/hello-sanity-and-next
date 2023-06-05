@@ -1,31 +1,32 @@
+"use client";
 import Link from "next/link";
 
 import "./styles.css";
+import { useRef } from "react";
 
 const Menu = () => {
+  const ref = useRef<HTMLInputElement>(null);
+
+  const handleMenuClick = () => {
+    if (ref?.current) {
+      ref.current.checked = !ref.current.checked;
+    }
+  };
+
   return (
     <nav role="navigation">
       <div id="menuToggle">
-        <input type="checkbox" />
+        <input type="checkbox" ref={ref} />
         <span></span>
         <span></span>
         <span></span>
         <ul id="menu">
           <div className="u-sheet">
-            <Link href="#">
+            <Link href="#" onClick={handleMenuClick}>
               <li>Home</li>
             </Link>
-            <Link href="/depoimentos">
+            <Link href="/depoimentos" onClick={handleMenuClick}>
               <li>Depoimentos</li>
-            </Link>
-            <Link href="#">
-              <li>Info</li>
-            </Link>
-            <Link href="#">
-              <li>Contact</li>
-            </Link>
-            <Link href="https://erikterwan.com/" target="_blank">
-              <li>Show me more</li>
             </Link>
           </div>
         </ul>
