@@ -10,9 +10,9 @@ const devOnlyPlugins = [getStartedPlugin()]
 export default defineConfig({
   name: 'default',
   title: 'sienna-ferret',
-
   projectId: '7g6fkany',
   dataset: 'production',
+  basePath: '/studio',
 
   plugins: [deskTool(), visionTool(), ...(isDev ? devOnlyPlugins : [])],
 
