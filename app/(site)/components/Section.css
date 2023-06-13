@@ -11,3 +11,10 @@
   width: 1140px !important;
   margin: -1100px auto 60px auto !important;
 }
+
+@media (max-width: 767px) {
+  .u-section-1 .u-layout-wrap-1 {
+    width: 340px !important;
+    margin-top: -1541px;
+  }
+}

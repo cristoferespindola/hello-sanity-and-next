@@ -5,3 +5,15 @@
   padding: 30px;
   justify-content: center;
 }
+
+.video-responsive > iframe {
+  margin: 0 auto;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+}
+
+@media (max-width: 768px) {
+  .video-responsive > iframe {
+    width: 100%;
+  }
+}

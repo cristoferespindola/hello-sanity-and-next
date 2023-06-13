@@ -10,8 +10,8 @@ const testimonial = {
     },
     {
       name: "url",
-      title: "URL",
-      type: "url",
+      title: "Video ID",
+      type: "string",
     },
   ],
 };

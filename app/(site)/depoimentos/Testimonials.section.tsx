@@ -1,25 +1,23 @@
+import { Testimonial } from "@/types/Testimonial";
 import Section from "../components/Section";
 import YouTubeVideo from "./iframe";
 
 import "./styles.css";
 
-const TestimonialsSection = () => {
+const TestimonialsSection = ({ testimonials }: Props) => {
   return (
     <Section title="Depoimentos" fullHeight>
-      <div className="row">
-        <YouTubeVideo videoId="LVjvX8bWno4" />
-        <YouTubeVideo videoId="wXQmVdG0LXM" />
-      </div>
-      <div className="row">
-        <YouTubeVideo videoId="jDLdhZiQ3W4" />
-        <YouTubeVideo videoId="_uJUtBMDbq8" />
-      </div>
-      <div className="row">
-        <YouTubeVideo videoId="N2npSevYhNE" />
-        <YouTubeVideo videoId="vxAigFLmCFw" />
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        {testimonials.map((item) => (
+          <YouTubeVideo videoId={item.url} />
+        ))}
       </div>
     </Section>
   );
 };
 
 export default TestimonialsSection;
+
+type Props = {
+  testimonials: Testimonial[];
+};

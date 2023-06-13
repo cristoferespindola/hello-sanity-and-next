@@ -3,6 +3,7 @@ interface LayoutProps {
 }
 
 import "./styles.css";
+import "../globals.css";
 import Image from "next/image";
 import Link from "next/link";
 import Menu from "./components/Menu/Menu";
