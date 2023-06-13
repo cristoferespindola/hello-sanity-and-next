@@ -1,4 +1,9 @@
 /** @type {import('next').NextConfig} */
+const STUDIO_REWRITE = {
+  source: "/studio/:path*",
+  destination: process.env.NODE_ENV === "development" ?
+  "http://localhost:3333/studio/:path*" : "/studio/index.html",
+};
 const nextConfig = {
   staticPageGenerationTimeout: 60 * 30, // 30 minutes
   compiler: {
@@ -8,6 +13,7 @@ const nextConfig = {
     appDir: true,
     externalDir: true
   },
+  rewrites: async () => [STUDIO_REWRITE],
   images: {
     remotePatterns: [
       {
@@ -21,7 +27,8 @@ const nextConfig = {
       'tdstorage.s3-sa-east-1.amazonaws.com',
       'www.gravatar.com',
       's.gravatar.com',
-      'platform.app.td'
+      'platform.app.td',
+      'cdn.sanity.io',
     ]
   },
   webpack(config) {
