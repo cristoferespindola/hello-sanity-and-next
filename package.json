@@ -4,10 +4,10 @@
   "private": true,
   "description": "Project to talk about Austim",
   "devDependencies": {
-    "concurrently": "^8.0.1",
-    "lerna": "^6.6.0",
     "@types/react": "^18.2.0",
-    "@types/react-dom": "18.2.0"
+    "@types/react-dom": "18.2.0",
+    "concurrently": "^8.0.1",
+    "lerna": "^6.6.0"
   },
   "scripts": {
     "dev": "concurrently \"next -p 4000\" \"cd studio && sanity dev\"",
@@ -24,6 +24,7 @@
     "dotenv": "^16.0.3",
     "next": "^13.4.0",
     "react": "^18.2.0'",
-    "react-dom": "^18.2.0'"
+    "react-dom": "^18.2.0'",
+    "sanity-plugin-vercel-deploy": "^3.3.4"
   }
 }
