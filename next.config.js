@@ -13,7 +13,6 @@ const nextConfig = {
     appDir: true,
     externalDir: true
   },
-  rewrites: async () => [STUDIO_REWRITE],
   images: {
     remotePatterns: [
       {
