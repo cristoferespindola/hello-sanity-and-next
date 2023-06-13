@@ -11,7 +11,7 @@
   },
   "scripts": {
     "dev": "concurrently \"next -p 4000\" \"cd studio && sanity dev\"",
-    "build": "echo 'Building Sanity to public/studio' && cd studio && sanity build ../public -y && cd .. && next build",
+    "build": "echo 'Building Sanity to public/studio' && cd studio && sanity build ../public/studio -y && cd .. && next build",
     "start": "vercel dev",
     "postinstall": "lerna bootstrap"
   },
