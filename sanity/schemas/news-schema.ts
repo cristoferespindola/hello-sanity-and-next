@@ -1,28 +1,26 @@
-const page = {
-  name: "page",
-  title: "Pages",
+const news = {
+  name: "news",
+  title: "Notícias",
   type: "document",
   fields: [
     {
       name: "title",
       title: "Title",
-      type: "string"
+      type: "string",
     },
     {
       name: "slug",
       title: "Slug",
       type: "slug",
-      options: { source: "title", maxLength: 96 }
+      options: { source: "title", maxLength: 96 },
     },
     {
       name: "content",
       title: "Content",
       type: "array",
-      of: [
-        { type: "block" }
-      ]
-    }
-  ]
-}
+      of: [{ type: "block" }],
+    },
+  ],
+};
 
-export default page;
+export default news;
