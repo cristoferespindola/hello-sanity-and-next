@@ -12,7 +12,7 @@ export default defineConfig({
   title: 'sienna-ferret',
   projectId: '7g6fkany',
   dataset: 'production',
-  basePath: '/admin',
+  basePath: '/studio',
 
   plugins: [deskTool(), visionTool(), ...(isDev ? devOnlyPlugins : [])],
 
