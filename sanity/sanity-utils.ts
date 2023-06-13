@@ -1,35 +1,29 @@
 import { createClient, groq } from "next-sanity";
-import { Project } from "@/types/Project";
-import clientConfig from './config/client-config'
+import { Testimonial } from "@/types/Testimonial";
+import clientConfig from "./config/client-config";
 import { Page } from "@/types/Page";
 
-export async function getProjects(): Promise<Project[]> {
+export async function getTestimonial(): Promise<Testimonial[]> {
   return createClient(clientConfig).fetch(
-    groq`*[_type == "project"]{
+    groq`*[_type == "testimonial"]{
       _id,
       _createdAt,
       name,
-      "slug": slug.current,
-      "image": image.asset->url,
       url,
-      content
     }`
-  )
+  );
 }
 
-export async function getProject(slug: string): Promise<Project> {
+export async function getProject(slug: string): Promise<Testimonial> {
   return createClient(clientConfig).fetch(
-    groq`*[_type == "project" && slug.current == $slug][0]{
+    groq`*[_type == "testimonial" && slug.current == $slug][0]{
       _id,
       _createdAt,
       name,
-      "slug": slug.current,
-      "image": image.asset->url,
-      url,
-      content
+      url
     }`,
     { slug }
-  )
+  );
 }
 
 export async function getPages(): Promise<Page[]> {
@@ -40,7 +34,7 @@ export async function getPages(): Promise<Page[]> {
       title,
       "slug": slug.current
     }`
-  )
+  );
 }
 
 export async function getPage(slug: string): Promise<Page> {
@@ -53,6 +47,5 @@ export async function getPage(slug: string): Promise<Page> {
       content
     }`,
     { slug }
-  )
+  );
 }
-
