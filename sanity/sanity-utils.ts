@@ -3,7 +3,7 @@ import { Testimonial } from "@/types/Testimonial";
 import clientConfig from "./config/client-config";
 import { News } from "@/types/News";
 
-export async function getTestimonial(): Promise<Testimonial[]> {
+export async function getTestimonials(): Promise<Testimonial[]> {
   return createClient(clientConfig).fetch(
     groq`*[_type == "testimonial"]{
       _id,
@@ -14,7 +14,7 @@ export async function getTestimonial(): Promise<Testimonial[]> {
   );
 }
 
-export async function getProject(slug: string): Promise<Testimonial> {
+export async function getTestimonial(slug: string): Promise<Testimonial> {
   return createClient(clientConfig).fetch(
     groq`*[_type == "testimonial" && slug.current == $slug][0]{
       _id,

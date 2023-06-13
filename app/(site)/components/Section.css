@@ -8,6 +8,6 @@
 }
 
 .full-height ~ .u-layout-wrap-1 {
-  width: 1140px;
-  margin: -1100px auto 60px;
+  width: 1140px !important;
+  margin: -1100px auto 60px auto !important;
 }
