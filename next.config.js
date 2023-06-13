@@ -12,11 +12,6 @@ const nextConfig = {
   experimental: {
     appDir: true,
     externalDir: true
-  },async rewrites() {
-    return [
-      { source: "/studio", destination: "/studio/index.html" },
-      { source: "/static", destination: "/studio/static" },
-    ];
   },
   images: {
     remotePatterns: [
