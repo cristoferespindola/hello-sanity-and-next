@@ -14,7 +14,7 @@ export default defineConfig({
   projectId: '7g6fkany',
   dataset: 'production',
 
-  plugins: [deskTool(), visionTool(), vercelDeployTool(), ...(isDev ? devOnlyPlugins : [])],
+  plugins: [deskTool(), visionTool(), ...(isDev ? devOnlyPlugins : [])],
 
   schema: {
     types: schemaTypes,
